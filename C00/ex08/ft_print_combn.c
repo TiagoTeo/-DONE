@@ -1,34 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_is_negative.c                                   :+:      :+:    :+:   */
+/*   ft_print_combn.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mtiago-s <mtiago-s@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mtiago-s <mtiago-s@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/07 18:22:02 by mtiago-s          #+#    #+#             */
-/*   Updated: 2022/09/08 16:36:35 by mtiago-s         ###   ########.fr       */
+/*   Created: 2022/09/08 15:59:30 by mtiago-s          #+#    #+#             */
+/*   Updated: 2022/09/08 17:08:54 by mtiago-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void	ft_is_negative(int n)
+void	ft_print_combn(int n)
 {
-	char	sign;
-
-	if (n >= 0)
-	{
-		sign = 'P';
-		write (1, &sign, 1);
-	}
-	else
-	{
-		sign = 'N';
-		write (1, &sign, 1);
-	}
 }
-/*
-int	main(void)
-{
-	ft_is_negative(-45);
-}*/

@@ -6,7 +6,7 @@
 /*   By: mtiago-s <mtiago-s@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/07 17:37:27 by mtiago-s          #+#    #+#             */
-/*   Updated: 2022/09/07 17:37:29 by mtiago-s         ###   ########.fr       */
+/*   Updated: 2022/09/08 19:17:35 by mtiago-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <unistd.h>
@@ -18,7 +18,7 @@ void	ft_putchar(char c)
 
 void	ft_print_numbers(void)
 {
-	char n;
+	char	n;
 
 	n = '0';
 	while (n <= '9')
@@ -27,8 +27,8 @@ void	ft_print_numbers(void)
 		n++;
 	}
 }
-
+/*
 int	main(void)
 {
 	ft_print_numbers();
-}
+}*/

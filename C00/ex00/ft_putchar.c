@@ -6,7 +6,7 @@
 /*   By: mtiago-s <mtiago-s@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/07 10:33:56 by mtiago-s          #+#    #+#             */
-/*   Updated: 2022/09/07 14:18:23 by mtiago-s         ###   ########.fr       */
+/*   Updated: 2022/09/08 17:19:42 by mtiago-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,6 @@ void	ft_putchar(char c)
 {
 	write(1, &c, 1);
 }
-
 /*int	main(void)
 {
 	ft_putchar('T');
