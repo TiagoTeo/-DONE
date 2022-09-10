@@ -6,26 +6,21 @@
 /*   By: mtiago-s <mtiago-s@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/09 11:56:27 by mtiago-s          #+#    #+#             */
-/*   Updated: 2022/09/09 12:35:40 by mtiago-s         ###   ########.fr       */
+/*   Updated: 2022/09/10 11:45:56 by mtiago-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void	ft_putpoint(char *c)
-{
-	char	a;
-
-	a = *c;
-	write(1, &a, 1);
-}
-
 void	ft_putstr(char *str)
 {
-	while (*str != 0)
+	int	i;
+
+	i = 0;
+	while (*str[i] != '\0')
 	{
-		ft_putpoint(str);
-		str++;
+		write(1, &str[i], 1);
+		i++;
 	}
 }
 /*int	main(void)
