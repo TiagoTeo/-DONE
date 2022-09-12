@@ -6,7 +6,7 @@
 /*   By: mtiago-s <mtiago-s@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/11 19:08:51 by mtiago-s          #+#    #+#             */
-/*   Updated: 2022/09/11 19:25:51 by mtiago-s         ###   ########.fr       */
+/*   Updated: 2022/09/12 14:31:51 by mtiago-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,9 +23,9 @@ int	ft_str_is_alpha(char *str)
 	}
 	while (str [i] != '\0')
 	{
-		if ((str [i] >= 41 && str [i] <= 90)
+		if ((str [i] >= 65 && str [i] <= 90)
 			|| (str [i] >= 97 && str [i] <= 122))
-			i++;
+				i++;
 		else
 			return (0);
 	}

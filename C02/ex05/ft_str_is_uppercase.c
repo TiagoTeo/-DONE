@@ -1,25 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcpy.c                                        :+:      :+:    :+:   */
+/*   ft_str_is_uppercase.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mtiago-s <mtiago-s@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/12 11:12:54 by mtiago-s          #+#    #+#             */
-/*   Updated: 2022/09/12 14:29:04 by mtiago-s         ###   ########.fr       */
+/*   Created: 2022/09/12 10:11:42 by mtiago-s          #+#    #+#             */
+/*   Updated: 2022/09/12 10:11:49 by mtiago-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strcy(char *dest, char *src)
+int	ft_str_is_uppercase(char *str)
 {
 	int	i;
 
 	i = 0;
-	while (src[i] != '\0')
+	while (str [i] != '\0')
 	{
-		dest[i] == src[i];
+		if (!(str [i] >= 65 && str [i] <= 90))
+		{
+			return (0);
+		}
 		i++;
 	}
-	dest[i] = '\0';
-	return (dest);
+	return (1);
 }

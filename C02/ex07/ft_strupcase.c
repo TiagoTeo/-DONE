@@ -1,25 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcpy.c                                        :+:      :+:    :+:   */
+/*   ft_strupcase.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mtiago-s <mtiago-s@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/12 11:12:54 by mtiago-s          #+#    #+#             */
-/*   Updated: 2022/09/12 14:29:04 by mtiago-s         ###   ########.fr       */
+/*   Created: 2022/09/12 10:39:55 by mtiago-s          #+#    #+#             */
+/*   Updated: 2022/09/12 14:35:11 by mtiago-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strcy(char *dest, char *src)
+char	*ft_strupcase(char *str)
 {
 	int	i;
 
-	i = 0;
-	while (src[i] != '\0')
+	while (str [i] != '\0')
 	{
-		dest[i] == src[i];
+		if (str [i] >= 97 && str [i] <= 122)
+		{
+			str [i] = str [i] - 32;
+		}
 		i++;
 	}
-	dest[i] = '\0';
-	return (dest);
+	return (str);
 }

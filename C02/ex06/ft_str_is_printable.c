@@ -1,25 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcpy.c                                        :+:      :+:    :+:   */
+/*   ft_str_is_printable.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mtiago-s <mtiago-s@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/12 11:12:54 by mtiago-s          #+#    #+#             */
-/*   Updated: 2022/09/12 14:29:04 by mtiago-s         ###   ########.fr       */
+/*   Created: 2022/09/12 10:31:36 by mtiago-s          #+#    #+#             */
+/*   Updated: 2022/09/12 11:11:46 by mtiago-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strcy(char *dest, char *src)
+int	ft_str_is_printable(char *str)
 {
 	int	i;
 
 	i = 0;
-	while (src[i] != '\0')
+	while (str [i] != '\0')
 	{
-		dest[i] == src[i];
+		if (!(str [i] >= 32 && str [i] <= 126))
+		{
+			return (0);
+		}
 		i++;
 	}
-	dest[i] = '\0';
-	return (dest);
+	return (1);
 }

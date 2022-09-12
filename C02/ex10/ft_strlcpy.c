@@ -1,25 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcpy.c                                        :+:      :+:    :+:   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mtiago-s <mtiago-s@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/12 11:12:54 by mtiago-s          #+#    #+#             */
-/*   Updated: 2022/09/12 14:29:04 by mtiago-s         ###   ########.fr       */
+/*   Created: 2022/09/12 13:19:48 by mtiago-s          #+#    #+#             */
+/*   Updated: 2022/09/12 14:46:34 by mtiago-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strcy(char *dest, char *src)
+unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size)
 {
-	int	i;
+	unsigned int	i;
+	unsigned int	count;
 
 	i = 0;
-	while (src[i] != '\0')
+	count = 0;
+	while (src[count] != '\0')
 	{
-		dest[i] == src[i];
-		i++;
+		count++;
+		if (size != 0)
+		{
+			while (src[i] != '\0' && i < (size - 1))
+			{
+				dest[i] = src[i];
+				i++;
+			}
+		dest[i] = '\0';
+		}
 	}
-	dest[i] = '\0';
-	return (dest);
+	return (count);
 }
