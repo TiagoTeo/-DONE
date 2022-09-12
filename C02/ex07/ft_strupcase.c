@@ -6,7 +6,7 @@
 /*   By: mtiago-s <mtiago-s@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/12 10:39:55 by mtiago-s          #+#    #+#             */
-/*   Updated: 2022/09/12 14:35:11 by mtiago-s         ###   ########.fr       */
+/*   Updated: 2022/09/12 15:48:18 by mtiago-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@ char	*ft_strupcase(char *str)
 {
 	int	i;
 
+	i = 0;
 	while (str [i] != '\0')
 	{
 		if (str [i] >= 97 && str [i] <= 122)

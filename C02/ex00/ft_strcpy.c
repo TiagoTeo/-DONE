@@ -6,18 +6,18 @@
 /*   By: mtiago-s <mtiago-s@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/12 11:12:54 by mtiago-s          #+#    #+#             */
-/*   Updated: 2022/09/12 14:29:04 by mtiago-s         ###   ########.fr       */
+/*   Updated: 2022/09/12 17:58:56 by mtiago-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strcy(char *dest, char *src)
+char	*ft_strcpy(char *dest, char *src)
 {
 	int	i;
 
 	i = 0;
 	while (src[i] != '\0')
 	{
-		dest[i] == src[i];
+		dest[i] = src[i];
 		i++;
 	}
 	dest[i] = '\0';
