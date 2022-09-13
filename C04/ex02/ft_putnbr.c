@@ -1,36 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcmp.c                                        :+:      :+:    :+:   */
+/*   ft_putnbr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mtiago-s <mtiago-s@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/12 15:56:05 by mtiago-s          #+#    #+#             */
-/*   Updated: 2022/09/13 18:51:55 by mtiago-s         ###   ########.fr       */
+/*   Created: 2022/09/13 13:03:18 by mtiago-s          #+#    #+#             */
+/*   Updated: 2022/09/13 13:09:22 by mtiago-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include <unistd.h>
 
-int	ft_strcmp(char *s1, char *s2)
+void	ft_putchar(char c)
 {
-	int	i;
-
-	i = 0;
-	while ((s1[i] == s2[i]) && (s1[i] != '\0') && (s2[i] != '\0'))
-	{
-		i++;
-	}
-	return (s1[i] - s2[i]);
+	write(1, &c, 1);
 }
-/*
-int	main(void)
-{
-	char	*nome1 = "tiago";
-	char	*nome2 = "tiago";
-	int		result;
 
-	result = ft_strcmp(nome1, nome2);
-	printf("%s\n%s", nome1, nome2);
-	printf("%d", result);
-}*/
+void	ft_putnbr(int nb)
+{
+	if (nb <= 2147483647 && nb >= -2147483648)
+	{
+		if (nb == -2147483648)
+		{
+			ft_putchar('-');
+			ft_putchar('2');
+			ft_putnbr(147483648);
+		}
+		else if (nb < 0)
+		{
+			ft_putchar('-');
+			ft_putnbr(-nb);
+		}
+		else if (nb > 9)
+		{
+			ft_putnbr(nb / 10);
+			ft_putnbr(nb % 10);
+		}
+		else
+			ft_putchar(nb + 48);
+	}
+}

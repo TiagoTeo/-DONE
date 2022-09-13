@@ -1,36 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcmp.c                                        :+:      :+:    :+:   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mtiago-s <mtiago-s@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/12 15:56:05 by mtiago-s          #+#    #+#             */
-/*   Updated: 2022/09/13 18:51:55 by mtiago-s         ###   ########.fr       */
+/*   Created: 2022/09/13 13:00:07 by mtiago-s          #+#    #+#             */
+/*   Updated: 2022/09/13 13:02:44 by mtiago-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include <unistd.h>
 
-int	ft_strcmp(char *s1, char *s2)
+void	ft_putstr(char *str)
 {
 	int	i;
+	char c;
 
 	i = 0;
-	while ((s1[i] == s2[i]) && (s1[i] != '\0') && (s2[i] != '\0'))
+	while (str[i] != '\0')
 	{
+		c = str[i];
+		write(1, &c, 1);
 		i++;
 	}
-	return (s1[i] - s2[i]);
 }
-/*
-int	main(void)
-{
-	char	*nome1 = "tiago";
-	char	*nome2 = "tiago";
-	int		result;
-
-	result = ft_strcmp(nome1, nome2);
-	printf("%s\n%s", nome1, nome2);
-	printf("%d", result);
-}*/
