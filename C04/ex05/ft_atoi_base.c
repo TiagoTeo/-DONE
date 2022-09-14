@@ -1,27 +1,15 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_atoi_base.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mtiago-s <mtiago-s@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/13 13:00:07 by mtiago-s          #+#    #+#             */
-/*   Updated: 2022/09/14 11:22:33 by mtiago-s         ###   ########.fr       */
+/*   Created: 2022/09/14 10:44:36 by mtiago-s          #+#    #+#             */
+/*   Updated: 2022/09/14 10:45:09 by mtiago-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-void	ft_putstr(char *str)
+int	ft_atoi_base(char *str, char *base)
 {
-	int		i;
-	char	c;
-
-	i = 0;
-	while (str[i] != '\0')
-	{
-		c = str[i];
-		write(1, &c, 1);
-		i++;
-	}
 }

@@ -1,27 +1,15 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_putnbr_base.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mtiago-s <mtiago-s@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/13 13:00:07 by mtiago-s          #+#    #+#             */
-/*   Updated: 2022/09/14 11:22:33 by mtiago-s         ###   ########.fr       */
+/*   Created: 2022/09/14 10:43:41 by mtiago-s          #+#    #+#             */
+/*   Updated: 2022/09/14 10:44:12 by mtiago-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-void	ft_putstr(char *str)
+void	ft_putnbr_base(int nbr, char *base)
 {
-	int		i;
-	char	c;
-
-	i = 0;
-	while (str[i] != '\0')
-	{
-		c = str[i];
-		write(1, &c, 1);
-		i++;
-	}
 }
