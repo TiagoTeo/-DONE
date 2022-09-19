@@ -1,31 +1,13 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_ultimate_range.c                                :+:      :+:    :+:   */
+/*   ft_convert_base.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mtiago-s <mtiago-s@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/18 19:18:34 by mtiago-s          #+#    #+#             */
-/*   Updated: 2022/09/19 15:16:21 by mtiago-s         ###   ########.fr       */
+/*   Created: 2022/09/19 15:13:58 by mtiago-s          #+#    #+#             */
+/*   Updated: 2022/09/19 15:14:00 by mtiago-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 
-int	ft_ultimate_range(int **range, int min, int max)
-{
-	int	i;
-
-	i = 0;
-	if (max <= min)
-	{
-		*range = NULL;
-		return (0);
-	}
-	*range = (int *)malloc(sizeof(int) * (max - min));
-	if (!*range)
-		return (-1);
-	while (min < max)
-		(*range)[i++] = min++;
-	return (i);
-}
