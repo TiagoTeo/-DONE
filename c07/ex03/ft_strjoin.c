@@ -6,7 +6,7 @@
 /*   By: mtiago-s <mtiago-s@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/19 10:17:41 by mtiago-s          #+#    #+#             */
-/*   Updated: 2022/09/19 14:52:37 by mtiago-s         ###   ########.fr       */
+/*   Updated: 2022/09/19 19:21:01 by mtiago-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,20 +30,20 @@ char	*ft_strcat(char *dest, char *src)
 	return (dest);
 }
 
-char	*ft_strjoin_assist(int size, char **strs, char *sep)
+char	*ft_strjoin_assist(int size, char **strs, char *sep, char *str)
 {
-	int	a;
-	int	k;
-	int	i;
+	int		a;
+	int		k;
+	int		i;
 
 	k = 1;
 	i = 0;
 	a = 0;
-	while (size > 0 || strs[a] != '\0')
+	while (size > 0 || strs[a])
 	{
 		if (k == 1 && strs[a])
 		{
-			ft_strcat(str, str[a]);
+			ft_strcat(str, strs[a]);
 			a++;
 			k = 0;
 			size--;
@@ -64,6 +64,6 @@ char	*ft_strjoin(int size, char **strs, char *sep)
 	str = (char *)malloc(sizeof (char) * size);
 	if (size == 0)
 		return ((char *)malloc(sizeof(char)));
-	str = ft_strjoin_assist(size, strs, sep);
+	str = ft_strjoin_assist(size, strs, sep, str);
 	return (str);
 }

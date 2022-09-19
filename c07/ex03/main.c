@@ -15,10 +15,10 @@ int		main(void)
 	offset = 0;
 	while (offset < 3)
 	{
-		strs[offset] = "_|_";
+		strs[offset] = "abc";
 		offset++;
 	}
-	res_str = ft_strjoin(3, strs, "i*");
+	res_str = ft_strjoin(3, strs, ", ");
 	if (res_str == NULL)
 		return (1);
 	printf("res: %s\n", res_str);
