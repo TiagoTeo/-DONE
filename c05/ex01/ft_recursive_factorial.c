@@ -6,11 +6,11 @@
 /*   By: mtiago-s <mtiago-s@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/18 12:49:53 by mtiago-s          #+#    #+#             */
-/*   Updated: 2022/09/18 13:15:41 by mtiago-s         ###   ########.fr       */
+/*   Updated: 2022/09/19 12:47:28 by mtiago-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_recursive_factorial(int nb)
+int	ft_recursive_factorial(int nb)
 {
 	if (nb == 0 || nb == 1)
 		return (1);
