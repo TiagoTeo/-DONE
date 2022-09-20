@@ -6,11 +6,36 @@
 /*   By: mtiago-s <mtiago-s@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/19 10:17:41 by mtiago-s          #+#    #+#             */
-/*   Updated: 2022/09/19 19:21:01 by mtiago-s         ###   ########.fr       */
+/*   Updated: 2022/09/20 17:09:35 by mtiago-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
+
+int	ft_omegacount(char **strs, char *sep, int size)
+{
+	int	s;
+	int	i;
+	int	n;
+
+	s = 0;
+	i = 0;
+	while (i < size)
+	{
+		n = 0;
+		while (strs[i][n])
+		{
+			s++;
+			n++;
+		}
+		i++;
+	}
+	i = 0;
+	while (sep[i])
+		i++;
+	s += i * (size - 1);
+	return (s);
+}
 
 char	*ft_strcat(char *dest, char *src)
 {
@@ -36,10 +61,10 @@ char	*ft_strjoin_assist(int size, char **strs, char *sep, char *str)
 	int		k;
 	int		i;
 
-	k = 1;
+	k = 0;
 	i = 0;
-	a = 0;
-	while (size > 0 || strs[a])
+	a = 1;
+	while (size > 1 && strs[a])
 	{
 		if (k == 1 && strs[a])
 		{
@@ -60,10 +85,22 @@ char	*ft_strjoin_assist(int size, char **strs, char *sep, char *str)
 char	*ft_strjoin(int size, char **strs, char *sep)
 {
 	char	*str;
+	int		i;
 
-	str = (char *)malloc(sizeof (char) * size);
-	if (size == 0)
-		return ((char *)malloc(sizeof(char)));
-	str = ft_strjoin_assist(size, strs, sep, str);
-	return (str);
+	i = 0;
+	if (size >= 0)
+	{
+		str = (char *)malloc(sizeof (char) * ft_omegacount(strs, sep, size) + 1);
+		if (size == 0)
+			return ((char *)malloc(sizeof(char)));
+		while (strs[0][i] != '\0')
+		{
+			str[i] = strs[0][i];
+			i++;
+		}
+		str[i] = '\0';
+		str = ft_strjoin_assist(size, strs, sep, str);
+		return (str);
+	}
+	return (0);
 }
