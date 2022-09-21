@@ -6,7 +6,7 @@
 /*   By: mtiago-s <mtiago-s@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/20 14:53:35 by mtiago-s          #+#    #+#             */
-/*   Updated: 2022/09/20 17:52:34 by mtiago-s         ###   ########.fr       */
+/*   Updated: 2022/09/21 12:11:03 by mtiago-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ char	*ft_strdup(char *str)
 	char	*dest;
 
 	i = ft_strlen(str);
-	dest = (char *)malloc(sizeof(char) * i);
+	dest = malloc(sizeof(*dest) * i + 1);
 	if (str == NULL)
 		return (NULL);
 	i = 0;

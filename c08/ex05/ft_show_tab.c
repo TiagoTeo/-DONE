@@ -6,10 +6,11 @@
 /*   By: mtiago-s <mtiago-s@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/20 17:54:37 by mtiago-s          #+#    #+#             */
-/*   Updated: 2022/09/21 10:39:07 by mtiago-s         ###   ########.fr       */
+/*   Updated: 2022/09/21 12:13:30 by mtiago-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "ft_stock_str.h"
 #include <unistd.h>
 
 void	ft_putchar(char c)
