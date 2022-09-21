@@ -6,7 +6,7 @@
 /*   By: mtiago-s <mtiago-s@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/18 19:18:34 by mtiago-s          #+#    #+#             */
-/*   Updated: 2022/09/19 15:16:21 by mtiago-s         ###   ########.fr       */
+/*   Updated: 2022/09/20 18:22:02 by mtiago-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,6 @@ int	ft_ultimate_range(int **range, int min, int max)
 	if (!*range)
 		return (-1);
 	while (min < max)
-		(*range)[i++] = min++;
+		range[i++][0] = min++;
 	return (i);
 }
