@@ -5,7 +5,7 @@ OBJS = *.o
 CC = gcc
 FLAGS = -c -o
 
-all: ${}
+all:
 	${CC} ${FLAGS} ${NAME} ${TARGET}
 
 clean:
