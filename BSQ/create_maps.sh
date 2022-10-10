@@ -1,0 +1,1 @@
+perl -w teste.pl 27 9 2 > mapa{0..10}
