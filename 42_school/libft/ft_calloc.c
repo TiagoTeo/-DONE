@@ -1,36 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mtiago-s <mtiago-s@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/11 14:58:30 by mtiago-s          #+#    #+#             */
-/*   Updated: 2022/10/13 17:23:04 by mtiago-s         ###   ########.fr       */
+/*   Created: 2022/10/11 17:59:27 by mtiago-s          #+#    #+#             */
+/*   Updated: 2022/10/31 13:08:39 by mtiago-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memcopy(void *dest, const void *src, size_t n)
+void	*ft_calloc(size_t nitems, size_t size)
 {
-	size_t	i;
+	void	*res;
 
-	i = 0;
-	if (!dest && !src)
+	res = (void *)malloc(size * nitems);
+	if (!res)
 		return (NULL);
-	while (i < n)
-	{
-		*(char *)(dest + i) = *(char *)(src + i);
-		i++;
-	}
-	return (dest);
+	ft_bzero(res, (size * nitems));
+	return (res);
 }
-/*
-int main()
-{
-    char src[] = "tiago";
-    char dest [6];
-    ft_memcpy(dest, src, sizeof(char) * 6);
-    printf("%s", dest);
-}*/
+/* 	unsigned long	temp;
+
+	temp = size * nitems;
+	if (nitems != temp / size)
+		return (NULL); */
